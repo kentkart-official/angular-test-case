@@ -1,0 +1,28 @@
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   <link rel="stylesheet" href="./user-details.component.css"/>
+   
+</head>
+
+<body>
+
+    <p class="pagename" style="text-align: center; font-size: 30px; padding-top: 40px;">Profil</p>
+    <div class="container" style="display: flex; margin-left: 7%;">
+        <div style="font-size:24px; float:right; margin-left:30px;">
+            
+            <p style="font-size:20px;">{{user.name}}
+            {{user.surname}}</p>
+            <p style="font-size:20px;">{{user.email}}</p>
+            <label style="font-size:20px;">Telefon Numarası</label>
+            <p style="font-size:20px;">{{user.UserPhoneNo}}</p>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>

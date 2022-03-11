@@ -1,0 +1,33 @@
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./login.component.css">
+</head>
+
+<body>
+
+    <div class="model-content animate" style="padding-top: 10%;">
+        <div class="container" style="width:700px; margin: 0 auto; ">
+            <div class="animate__animated animate__fadeIn" style="padding-left: 12%;">
+                <div *ngIf="isLoggedin === false">
+                    <div>
+                        <input type="button" (click)="loginWithGoogle()" class="btnLoginWithGoogle"
+                            value="Login with Google">
+                    </div>
+                </div>
+                <input type="submit" id="LogIn" name="btnSeeUsers" value="Kullancıları Görüntüle" routerLink="/users" />
+                <input type="submit" id="LogIn" name="btnSeeCompanies" value="Şirketleri Görüntüle"
+                    routerLink="/companies" />
+                <div *ngIf="isLoggedin === true">
+                    <input type="submit" id="LogIn" name="btnSeeCompanies" value="Çıkış Yap" (click)="logOut()" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

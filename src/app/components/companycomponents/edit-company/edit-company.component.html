@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giriş Yap</title>
+    
+    <link rel="stylesheet" href="./edit-company.component.css"/>
+</head>
+
+<body>
+
+    <div class="model-content animate" style="padding-top: 50px; padding-bottom: 150px;">
+        <form #dataForm="ngForm" (ngSubmit)="editCompany(dataForm.value)" enctype="multipart/form-data" novalidate>
+            <div class="container" style="width:700px; margin: 0 auto;">
+                <label for="firstName">Şirket Adı</label>
+                <input type="text" name="companyname" class="form-control" id="inputCompanyName" value={{company.companyname}} [(ngModel)]="company.companyname">
+                <label for="surname">Açıklaması</label>
+                <input type="text" name="description" class="form-control" id="inputDescription" value={{company.description}} [(ngModel)]="company.description">
+                <input type="hidden" name="companyid" class="form-control" id="inputCompanyid" value={{company.companyid}} [(ngModel)]="company.companyid">
+
+                <button id="btnCompanyEdit" 
+                    style="background-color:rgba(131, 179, 172 / 0.7); position: relative; margin-left: 150px ;"
+                    type="submit" name="btnCompanyEdit"> Güncelle </button>
+
+
+
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+</html>

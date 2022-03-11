@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="./user-list.component.css" />
+</head>
+
+<body>
+
+    <div class="model-content animate" style="padding-top: 50px; padding-bottom: 150px;">
+        <div class="container" style="width:700px; margin: 0 auto;">
+            <table class="table-responsive">
+                <tr>
+                    <td>
+                        <button id="btnSeeCompanies" style="background-color:rgba(131, 179, 172 / 0.7);" type="submit"
+                            name="btnCompanies" routerLink="/companies"> Şirketleri Görüntüle </button>
+                    </td>
+                    <td *ngIf="IsLoggedIn()">
+                        <button id="btnAddUser" style="background-color:rgba(131, 179, 172 / 0.7); " type="submit"
+                            name="btnAddUser" routerLink="/adduser"> Kullanıcı Ekle </button>
+                    </td>
+                </tr>
+            </table>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">İsim</th>
+                            <th scope="col">Soyisim</th>
+                            <th scope="col" *ngIf="IsLoggedIn()">Düzenle</th>
+                            <th scope="col" *ngIf="IsLoggedIn()">Sil</th>
+                            <th scope="col">Detay</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let user of Repdata; let i = index" [attr.data-index]="i">
+                            <td>{{user.userid}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.surname}}</td>
+                            <td *ngIf="IsLoggedIn()">
+                                <a style="color:blueviolet;cursor: pointer;"
+                                    [routerLink]="['edit', user.userid]">Düzenle</a>
+                            </td>
+                            <td *ngIf="IsLoggedIn()">
+                                <a (click)="deleteUser(user.userid)"
+                                    style="color:rgb(226, 43, 43);cursor: pointer;">Sil</a>
+                            </td>
+                            <td><a style="color:rgb(58, 226, 43);cursor: pointer;"
+                                    [routerLink]="['details', user.userid]">Görüntüle </a> </td>
+
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div *ngIf="IsLoggedIn()">
+                    <input id="btnCreateUser"
+                    style="background-color:rgba(131, 179, 172 / 0.7); position: relative; margin-left: 75px ;"
+                    type="submit" name="btnSignOut" (click)="logOut()" value="Çıkış Yap" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

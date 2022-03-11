@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giriş Yap</title>
+
+    <link rel="stylesheet" href="./add-company.component.css" />
+</head>
+
+<body>
+
+    <div class="model-content animate" style="padding-top: 50px; padding-bottom: 150px;">
+        <div class="container" style="width:700px; margin: 0 auto;">
+            <form #dataForm="ngForm" (ngSubmit)="createCompany(dataForm)" enctype="multipart/form-data" novalidate>
+                <label for="CompanyName">Şirket Adı</label>
+                <input type="text" name="companyname" class="form-control" id="CompanyName" placeholder="Şirket Adı"
+                    ngModel>
+                <label for="description">Açıklama</label>
+                <input type="text" name="description" class="form-control" id="description" placeholder="Açıklama"
+                    ngModel>
+                <input id="createCompany"
+                    style="background-color:rgba(131, 179, 172 / 0.7); position: relative; margin-left: 75px ;"
+                    type="submit" name="createCompany" value="Şirket Ekle" />
+            </form>
+            <input id="companyList"
+                style="background-color:rgba(131, 179, 172 / 0.7); position: relative; margin-left: 75px ;"
+                type="submit" name="companyList" value="Şirket Listesi" routerLink="/companies" />
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
