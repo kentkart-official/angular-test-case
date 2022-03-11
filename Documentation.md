@@ -23,7 +23,7 @@ You should install @angular/router with following command to routing
 
     npm install @angular/router
 
-You can now start developing the application using Webpack by typing:
+You can now start the application with following command
 
     ng serve --open
     
