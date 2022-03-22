@@ -11,15 +11,35 @@ You will work for Kentkart, an international company that provides public transp
 
 You should write a very simple application where there is only one scenario:
 
-##### Scenario 1.
+##### Scenario 1. (Frontend Developer candidates)
 
-* All APIs called from the Frontend will come from the Angular port
+Frontend
 * User logins must be provided by logging in with Gmail.
 * Routing with authentication middleware
-* IndexedDB (client-side storage), which contains "users" and "companies" tables, will be used.
-* User and company listing pages will be viewable by all users
-* Only logged in users will be able to add, edit and delete users and companies.
-* For interface design, you can use a ready-made template or create your own. Make sure your html, css and js codes are careful.
+* IndexedDB (client-side storage), which contains "employees" and "companies" tables, will be used.
+* Employee and company listing pages will be viewable by all users
+* Only logged in users will be able to add, edit and delete employees and companies.
+* The logged in user must be able to define one or more employees for a company.
+* For interface design, you can use a ready-made template or create your own. We take care that your html, css and js codes are attentive.
+* Do not forget to create readme and documentation for your project
+* Make sure the code is understandable by other programmers.
+
+##### Scenario 2. (Fullstack Developer candidates)
+
+Backend
+* NodeJS (ExpressJS) should be used for the backend side
+* JWT should be used for user authentication
+* User logins must be provided by logging in with username and password.
+* Create webservices that get, save, update, and delete information for employee, company, and company employees.
+* You can use MySQL as database.
+* All APIs called from the Frontend will come from the Angular port
+
+Frontend
+* Routing with authentication middleware
+* Employee, company and company employees listing pages will be viewable by all users
+* Only logged in users will be able to add, edit and delete employees, companies and company employees.
+* The logged in user must be able to define one or more employees for a company.
+* For interface design, you can use a ready-made template or create your own. We take care that your html, css and js codes are attentive.
 * Do not forget to create readme and documentation for your project
 * Make sure the code is understandable by other programmers.
 
